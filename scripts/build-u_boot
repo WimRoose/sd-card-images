@@ -6,7 +6,7 @@ TUPLE="${2}" # For example "aarch64-linux-gnu"
 
 set -ex
 
-U_BOOT_GIT_URL_DEFAULT="https://github.com/WimRoose/u-boot.git"
+U_BOOT_GIT_URL_DEFAULT="https://github.com/WimRoose/u-boot-olinuxino.git"
 
 if [ ! -z "${U_BOOT_GIT_REV}" ]
 then
