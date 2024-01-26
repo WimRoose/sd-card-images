@@ -156,10 +156,10 @@ chroot debian /bin/sh -ex <<- EOF
 /usr/bin/apt-get update
 /usr/bin/apt-get -y upgrade
 /usr/bin/apt-get -y --no-install-recommends ${KERNELSUITE} install ${KERNEL}
+/usr/bin/apt-get -y install vim nano ca-certificates sudo || :
 /usr/bin/apt-get -y install systemd-timesyncd || :
 /usr/bin/apt-get -y install systemd-resolved || :
 /usr/bin/apt-get -y install openssh-server || :
-/usr/bin/apt-get -y install vim nano ca-certificates sudo || :
 /usr/bin/apt-get clean
 /bin/rm -rf /var/lib/apt/lists/*
 /usr/bin/dpkg-query --showformat='kernel,\${Version}\n' --show ${KERNEL} > /tmp/versions.csv
