@@ -156,7 +156,7 @@ chroot debian /bin/sh -ex <<- EOF
 /usr/bin/apt-get update
 /usr/bin/apt-get -y upgrade
 /usr/bin/apt-get -y --no-install-recommends ${KERNELSUITE} install ${KERNEL}
-/usr/bin/apt-get -y install vim nano ca-certificates sudo || :
+/usr/bin/apt-get -y install vim nano ca-certificates sudo dialog apt-utils curl git iproute2 iptables || :
 /usr/bin/apt-get -y install systemd-timesyncd || :
 /usr/bin/apt-get -y install systemd-resolved || :
 /usr/bin/apt-get -y install openssh-server || :
